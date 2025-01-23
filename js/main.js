@@ -23,7 +23,7 @@ searchInputEl.addEventListener('blur', function () {
   searchEl.classList.remove('focused');
   // searchInputEl의 요소에 포커스가 해제되면 
   searchInputEl.setAttribute('placeholder', '');
-    //searchInputEl에 html세팅한다. placeholder-설명으로 들어갈 힌트작성 (' ')
+  //searchInputEl에 html세팅한다. placeholder-설명으로 들어갈 힌트작성 (' ')
 });
 
 
@@ -32,7 +32,7 @@ const toTopEl = document.querySelector('#to-top');
 
 
 window.addEventListener('scroll', _.throttle(function(){
-  console.log(window.scrollY); //스크롤 할때마다 콘솔에 scroll이 나옴옴
+  console.log(window.scrollY); //스크롤 할때마다 콘솔에 scroll이 나옴
   if (window.scrollY > 500){
     //배지 숨기기
     //gsap.to(요소, 지속시간, 옵션);
@@ -84,7 +84,7 @@ new Swiper('.notice-line .swiper-container', {
   loop: true,
 });
 new Swiper('.promotion .swiper-container', {
-  slidesPerView: 3, //한번에 버여줄 슬라이드 개수
+  slidesPerView: 3, //한번에 보보여줄 슬라이드 개수
   spaceBetween: 10, //슬라이드 사이 여백
   centeredSlides: true, //1번 슬라이드 가운데 보이기
   loop: true,
