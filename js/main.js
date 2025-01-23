@@ -1,38 +1,9 @@
-const searchEl = document.querySelector('.search');
-// 변수 searchEl를 지정해주고 찾아라. document라는 개체에서 querySelector라는 매소드를 실행해줌. class가 search인 요소를 검색
-const searchInputEl = searchEl.querySelector('input');
-// 변수 searchInputEl를 찾아라. searchEl안에서 input요소를 찾아라`
-
-searchEl.addEventListener('click', function () {
-  // .search라는 div요소를 click을 했을때 함수를 실행해라
-  searchInputEl.focus();
-  // searchInputEl를 포커스 해라
-});
-
-searchInputEl.addEventListener('focus', function () {
-  // searchInputEl의 요소에 포커스가 되면
-  searchEl.classList.add('focused');
-  // 요소.개체.매소드
-  //특정요소에 class정보를 가지고 있는 개체에서 focused된 상태를 추가하겠다
-  searchInputEl.setAttribute('placeholder', '통합검색');
-  //searchInputEl에 html세팅한다. placeholder-설명으로 들어갈 힌트작성 ('통합검색')
-});
-
-searchInputEl.addEventListener('blur', function () {
-  // searchInputEl의 요소에 blur처리를 해라
-  searchEl.classList.remove('focused');
-  // searchInputEl의 요소에 포커스가 해제되면 
-  searchInputEl.setAttribute('placeholder', '');
-    //searchInputEl에 html세팅한다. placeholder-설명으로 들어갈 힌트작성 (' ')
-});
-
-
 const badgeEl = document.querySelector('header .badges');
 const toTopEl = document.querySelector('#to-top');
 
 
 window.addEventListener('scroll', _.throttle(function(){
-  console.log(window.scrollY); //스크롤 할때마다 콘솔에 scroll이 나옴옴
+  console.log(window.scrollY); //스크롤 할때마다 콘솔에 scroll이 나옴
   if (window.scrollY > 500){
     //배지 숨기기
     //gsap.to(요소, 지속시간, 옵션);
@@ -84,7 +55,7 @@ new Swiper('.notice-line .swiper-container', {
   loop: true,
 });
 new Swiper('.promotion .swiper-container', {
-  slidesPerView: 3, //한번에 버여줄 슬라이드 개수
+  slidesPerView: 3, //한번에 보보여줄 슬라이드 개수
   spaceBetween: 10, //슬라이드 사이 여백
   centeredSlides: true, //1번 슬라이드 가운데 보이기
   loop: true,
@@ -165,8 +136,3 @@ spyEls.forEach(function (spyEl) {
     .setClassToggle(spyEl, 'show')
     .addTo(new ScrollMagic.Controller());
 });
-
-
-
-const thisYear = document.querySelector('.this-year');
-thisYear.textContent = new Date().getFullYear(); //현재 연도 시간이 나오게
